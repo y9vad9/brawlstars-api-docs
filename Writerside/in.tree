@@ -4,9 +4,8 @@
 
 <instance-profile id="in"
                  name="Brawl Stars API Docs"
-                 start-page="Section-Starting-Page.topic">
+                 start-page="Getting-started.md">
 
-    <toc-element topic="Section-Starting-Page.topic" toc-title="Home"/>
     <toc-element topic="Overview.md"/>
     <toc-element topic="Getting-started.md"/>
     <toc-element topic="Value-types-validation.md" />
