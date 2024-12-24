@@ -15,7 +15,7 @@ dependencies {
     // Brawl Stars API (jvm, js)
     commonMainImplementation("com.y9vad9.bsapi:core:$version")
     // Brawlify API (jvm, js)
-    commonMainImplementation("com.y9vad9.bsapi:core:$version")
+    commonMainImplementation("com.y9vad9.bsapi:brawlify:$version")
 }
 ```
 
@@ -52,8 +52,7 @@ dependencies {
    }
    ```
    Library enforces type safety with validated value classes. For
-   the reference, take a look
-   at [PlayerTag](https://github.com/y9vad9/brawlstars-api/blob/master/core/src/commonMain/kotlin/com/y9vad9/bsapi/types/player/value/PlayerTag.kt).
+   the reference, take a look [](Value-types-validation.md).
 
 #### Fetching Battle Data
 

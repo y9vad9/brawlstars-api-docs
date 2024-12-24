@@ -39,7 +39,7 @@ suspend fun foo(client: BrawlStarsClient, clubTag: ClubTag) {
     val flow = client.[[[getClubMembersLazily|https://github.com/y9vad9/brawlstars-api/blob/45cb691a7e3930b3ee2610f3aaf9b570a856488f/core/src/commonMain/kotlin/com/y9vad9/bsapi/BrawlStarsClient.kt#L115]]](
         clubTag = clubTag,
         limit = Count.createUnsafe(5)
-    ).asFlow()
+    ).[[[asFlow()|https://github.com/y9vad9/brawlstars-api/blob/45cb691a7e3930b3ee2610f3aaf9b570a856488f/core/src/commonMain/kotlin/com/y9vad9/bsapi/types/pagination/PagesIterator.kt#L61]]]
     
     flow.collect { page ->
         println(page)
