@@ -12,23 +12,24 @@ through asynchronous [`PagesIterator`](https://github.com/y9vad9/brawlstars-api/
 
 Let's see the example:
 ```kotlin
-fun foo(client: BrawlStarsClient, clubTag: ClubTag) {
+fun printMembersName(client: BrawlStarsClient, clubTag: ClubTag) {
     // limit defines elements per page
-    val iterator = client.[[[getClubMembersLazily|https://github.com/y9vad9/brawlstars-api/blob/45cb691a7e3930b3ee2610f3aaf9b570a856488f/core/src/commonMain/kotlin/com/y9vad9/bsapi/BrawlStarsClient.kt#L115]]](
+    val iterator: PagesIterator<PlayerName> = client.[[[getClubMembersLazily|https://github.com/y9vad9/brawlstars-api/blob/45cb691a7e3930b3ee2610f3aaf9b570a856488f/core/src/commonMain/kotlin/com/y9vad9/bsapi/BrawlStarsClient.kt#L115]]](
         clubTag = clubTag,
+        // how much items per page will be loaded
         limit = Count.createUnsafe(5)
-    )
+    ).[[[map|https://github.com/y9vad9/brawlstars-api/blob/1d796f44771805de5f288e0201a2106bebe4d33e/core/src/commonMain/kotlin/com/y9vad9/bsapi/types/pagination/PagesIterator.kt#L83]]] { member -> member.name }
     
     while (iterator.hasNext()) {
         // if failed, retry
-        val page = iterator.next().getOrNull() ?: continue
-        println(page)
+        val name = iterator.next().getOrNull() ?: continue
+        println(name.raw)
     }
     
     // now we can go back:
     while (iterator.hasPrevious()) {
-        val page = iterator.previous().getOrNull() ?: continue
-        println(page)
+        val name = iterator.previous().getOrNull() ?: continue
+        println(name.raw)
     }
 }
 ```
