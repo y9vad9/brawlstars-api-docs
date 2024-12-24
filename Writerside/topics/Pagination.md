@@ -7,7 +7,8 @@ the loading.
 In our library, we also support it, but in the very convenient way
 through asynchronous [`PagesIterator`](https://github.com/y9vad9/brawlstars-api/blob/master/core/src/commonMain/kotlin/com/y9vad9/bsapi/types/pagination/PagesIterator.kt).
 
-`PagesIterator` is able to go back and forward as in the official API.
+`PagesIterator` is able to go back and forward as in the official API. In addition, it provides
+`kotlin.Result` class in case of any failures that you may want to handle
 
 Let's see the example:
 ```kotlin
@@ -41,10 +42,15 @@ suspend fun foo(client: BrawlStarsClient, clubTag: ClubTag) {
         limit = Count.createUnsafe(5)
     ).[[[asFlow()|https://github.com/y9vad9/brawlstars-api/blob/45cb691a7e3930b3ee2610f3aaf9b570a856488f/core/src/commonMain/kotlin/com/y9vad9/bsapi/types/pagination/PagesIterator.kt#L61]]]
     
-    flow.collect { page ->
+    // for flow, asFlow() extension throws exceptions inside flow
+    // so, better to catch it
+    flow.retryWhen { cause, attempt -> 
+        cause.printStackTrace()
+        (attempt < 10).also { it (it) delay(1000L) }
+    }.collect { page ->
         println(page)
     }
 }
 ```
 
-There's other extension that you can explore [here](https://github.com/y9vad9/brawlstars-api/blob/master/core/src/commonMain/kotlin/com/y9vad9/bsapi/types/pagination/PagesIterator.kt#L61).
+There are other extensions that you can explore [here](https://github.com/y9vad9/brawlstars-api/blob/master/core/src/commonMain/kotlin/com/y9vad9/bsapi/types/pagination/PagesIterator.kt#L61).
