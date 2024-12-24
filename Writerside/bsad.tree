@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="bsad"
+                 name="Brawl Stars API Docs"
+                 start-page="Section-Starting-Page.topic">
+
+    <toc-element topic="Section-Starting-Page.topic" toc-title="Home"/>
+    <toc-element topic="Overview.md"/>
+    <toc-element topic="Getting-started.md"/>
+    <toc-element topic="Value-types-validation.md" />
+    <toc-element topic="Pagination.md" />
+
+    <toc-element toc-title="Tutorials">
+        <toc-element topic="Retrieving-Player-Ranked-Stage.md" />
+    </toc-element>
+
+
+    <toc-element toc-title="GitHub Repository"
+                 href="https://github.com/y9vad9/brawlstars-api"/>
+</instance-profile>
