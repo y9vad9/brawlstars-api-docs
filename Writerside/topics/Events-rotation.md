@@ -56,6 +56,7 @@ println(upcoming)
 ```
 Here's data you're capable to get:
 <code-block lang="kotlin" collapsible="true" collapsed-title="Entities">
+<![CDATA[
 @Serializable
 public data class BrawlifyEvent(
     val slot: Slot,
@@ -111,6 +112,7 @@ public data class BrawlifyMap(
         val imageUrl: BrawlifyUrl,
     )
 }
+]]>
 </code-block>
 In addition, as you may see, it also provides the statistics for the teams! It does not have limitations like
 Brawl Stars official API, so the recommendation will be to use Brawlify for such tasks to minimize risk of running into

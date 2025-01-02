@@ -132,6 +132,7 @@ it comes in handy!
 
 Here's usage example:
 <code-block lang="Kotlin">
+<![CDATA[
 val rawBattles = PagesIterator(
   limit = Count.createUnsafe(20),
 ) { count, cursors ->
@@ -144,6 +145,7 @@ val rawBattles = PagesIterator(
 
   Result.failure(...)
 }.typed()
+]]>
 </code-block>
 It does not support going back (<code>previous()</code>), only forward (<code>next()</code>)
 

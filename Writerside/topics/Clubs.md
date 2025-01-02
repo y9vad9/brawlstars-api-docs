@@ -86,7 +86,7 @@ Then you may download image in any way (library does not include this functional
       <a href="https://brawlapi.com/#/endpoints/icons" summary="Get Icons API endpoint summary with example output.">Brawlify Icons API</a>
     </category>
     <category ref="internal">
-        <a href="Clubs.md"/>
+        <a href="Profile.md"/>
         <a href="Handling-Brawl-Stars-Client-Error.md"/>
     </category>
 </seealso> 
