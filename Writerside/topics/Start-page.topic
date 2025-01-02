@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Home" id="Start-page">
+
+    <!--    A section combines multiple topics dedicated to a specific subject.
+                Add a starting page to provide an overview of the topics in the section.
+                Start with two topics you want to promote in the <spotlight> group,
+                several important topics in the <primary> group (for example, where to start),
+                several less important topics in the <secondary> group (for example, more advanced topics),
+                and optionally add any other relevant topics in the <misc> group as cards and lists of links
+                (maybe related topics from other sections).
+                Only the spotlight section is limited to two topics.
+                For other groups, try to keep the number between 2 and 6, but you can add more if necessary.-->
+
+    <section-starting-page>
+        <title>BSApi Library Documentation</title>
+        <description>
+            These topics will help you get started with BSApi library.
+        </description>
+
+        <spotlight>
+            <a href="Overview.md" type="idea" summary="The key things and considerations while developing library">Overview</a>
+            <a href="Getting-started.md" type="start" summary="Install and start quickly with the library">Getting started</a>
+        </spotlight>
+
+        <primary>
+            <title>Topics to start from</title>
+            <a href="Profile.md" summary="Learn how to get player's profile with Brawl Stars and Brawlify APIs">Player's profile</a>
+            <a href="Battlelog.md" summary="Learn how to deal with player's battle log: how to retrieve its ranked rank and so on.">Player's battle log</a>
+        </primary>
+
+        <secondary>
+            <title>Explore advanced stuff</title>
+            <a href="Value-types-validation.md" summary="Learn how type-safety is ensured">How data is validated?</a>
+            <a href="Pagination.md" summary="Learn how to deal with pagination from official Brawl Stars API">How to use pagination in library?</a>
+        </secondary>
+    </section-starting-page>
+
+</topic>

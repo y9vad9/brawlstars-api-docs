@@ -3,18 +3,28 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="in"
-                 name="Brawl Stars API Docs"
-                 start-page="Getting-started.md">
+                  name="BSApi Lib Docs"
+                  start-page="Start-page.topic">
+
+    <toc-element topic="Start-page.topic"/>
 
     <toc-element topic="Overview.md"/>
     <toc-element topic="Getting-started.md"/>
-    <toc-element topic="Value-types-validation.md" />
-    <toc-element topic="Pagination.md" />
-
-    <toc-element toc-title="Tutorials">
-        <toc-element topic="Retrieving-Player-Ranked-Stage.md" />
+    <toc-element toc-title="Core functionality">
+        <toc-element topic="Value-types-validation.md"/>
+        <toc-element topic="Pagination.md"/>
     </toc-element>
 
+    <toc-element topic="Profile.md"/>
+    <toc-element topic="Clubs.md"/>
+    <toc-element topic="Battlelog.md"/>
+
+    <toc-element topic="Events-rotation.md" />
+    <toc-element topic="Rankings.md" />
+
+    <toc-element topic="Handling-Brawl-Stars-Client-Error.md"/>
+
+    <toc-element topic="Brawlify-Api.md"/>
 
     <toc-element toc-title="GitHub Repository"
                  href="https://github.com/y9vad9/brawlstars-api"/>
