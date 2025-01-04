@@ -13,9 +13,9 @@ repositories {
 
 dependencies {
     // Brawl Stars API (jvm, js)
-    commonMainImplementation("com.y9vad9.bsapi:core:$version")
+    commonMainImplementation("com.y9vad9.brawlstars:core:$version")
     // Brawlify API (jvm, js)
-    commonMainImplementation("com.y9vad9.bsapi:brawlify:$version")
+    commonMainImplementation("com.y9vad9.brawlify:core:$version")
 }
 ```
 

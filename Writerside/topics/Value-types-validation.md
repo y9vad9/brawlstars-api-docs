@@ -27,4 +27,4 @@ val clubTag = ClubTag.createOr("...") { failure: CreationFailure ->
 val clubTag: ClubTag = ClubTag.createUnsafe("...")
 ```
 
-For more information, you may want to see [`ValueConstructor` sources](https://github.com/y9vad9/brawlstars-api/blob/master/core/src/commonMain/kotlin/com/y9vad9/bsapi/types/ValueConstructor.kt).
+For more information, you may want to see [`kotlidator` sources](https://github.com/y9vad9/ktiny-libs/tree/master/kotlidator).
